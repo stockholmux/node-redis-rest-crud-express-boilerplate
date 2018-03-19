@@ -14,14 +14,14 @@ const
 
   connection        = require(argv.connection),                                         // import the connection from the command line and make it into a JS object
   client            = redis.createClient(connection),                                   // create the master client connection to Redis
-  keys              = {                                                                 // store our keys in once place
+  keys              = {                                                                 // store our keys in one place
     cars          : 'cars',
     features      : 'features',
     descriptions  : 'cardescriptions'
   },
   server            = express();                                                        // create the server instance
 
-function baseRoute(str) { return '/:base('+str+')'; }                                   // we'll use this syntax sugar to pass in a base routes that also determine the root of the redis key
+function baseRoute(str) { return '/:base('+str+')'; }                                   // we'll use this syntax sugar to pass in a base route that also determine the root of the redis key
 
 sortedHashRoutes.setClient(client);                                                     // give the clients to the different routes
 listRoutes.setClient(client);
