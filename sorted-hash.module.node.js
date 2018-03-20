@@ -46,7 +46,7 @@ router.post(                                                                    
 
 //read all (or by range)
 router.get(                                                                             // respond only to HTTP GET
-  '/:min?[\\d+]/:max?[\\d+]',                                                           // ':min' (optional) enables `req.params.min` and ':max' (also optional) enables `req.params.max` (regular expressions are used to ensure only numbers go into these fields)
+  '/:min(\\d+)?/:max(\\d+)?',                                                           // ':min' (optional) enables `req.params.min` and ':max' (also optional) enables `req.params.max` (regular expressions are used to ensure only numbers go into these fields)
   function(req,res,next) {                                                              // request, response and next middleware
     let min = req.params.min ? req.params.min : '-inf';                                 // if min is passed, then use it. Otherwise use '-inf'
     let max = req.params.max ? req.params.max : '+inf';                                 // if max is passed, then use it. Otherwise use '+inf'
