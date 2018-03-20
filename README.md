@@ -39,11 +39,11 @@ Because this is based on sub-routers, you can create complex routes that just _e
 
 **Sorted Set + Hash Endpoints** Defined in `sorted-hash.module.node.js`
 * **Create** POST `/`_base_
-* **Read** GET `/`_base_`/`_uniqueId (read a member)
-* **Read** GET `/`_base_`/`_min_` (read starting at min)
+* **Read** GET `/`_base_`/`_uniqueId_ (read a member)
+* **Read** GET `/`_base_`/`_min_ (read starting at min)
 * **Read** GET `/`_base_`/`_min_`/`_max_ (read starting at min and ending at max)
-* **Update** PATCH `/`_base_`/`_uniqueId (update a member)
-* **Delete** DELETE `/`_base_`/`_uniqueId (delete a member)
+* **Update** PATCH `/`_base_`/`_uniqueId_ (update a member)
+* **Delete** DELETE `/`_base_`/`_uniqueId_ (delete a member)
 
 *MIT License*
 
